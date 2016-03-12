@@ -45,19 +45,12 @@ public class PercentagePosition : MonoBehaviour {
 
 	[ContextMenu("RePosition")]
 	public void RePosition(){
-		Vector2 SpriteSize = new Vector2(0,0);
-		 
+		  
 		float cheight = 2f * Camera.main.orthographicSize;
 		float cwidth = cheight * Camera.main.aspect;
 
  
-
-		SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-		if (sprite != null) {
-			SpriteSize.x = sprite.bounds.size.x / transform.localScale.x;
-			SpriteSize.y = sprite.bounds.size.y / transform.localScale.y;
-		}
-
+ 
 		Vector3 world = Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth
 			, Camera.main.pixelHeight
 			, 0));
@@ -104,14 +97,7 @@ public class PercentagePosition : MonoBehaviour {
 	[ContextMenu("GetPositionFromCurrent")]
 	public void GetPositionFromCurrent(){
 
-		Vector2 SpriteSize = new Vector2(0,0);
-
-		SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-		if (sprite != null) {
-			SpriteSize.x = sprite.bounds.size.x / transform.localScale.x;
-			SpriteSize.y = sprite.bounds.size.y / transform.localScale.y;
-		}
-
+ 
 		Vector3 world = Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.pixelWidth
 			, Camera.main.pixelHeight
 			, 0));
